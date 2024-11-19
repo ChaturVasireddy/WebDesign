@@ -1,8 +1,8 @@
 const lenis = new Lenis({ autoRaf: true, });
 lenis.on('scroll', (e) => { console.log(e); });
 
-//const cursor = document.querySelector("#cursor");
-//document.addEventListener("mousemove", e => { cursor.setAttribute("style", "top: " + (e.pageY - 20) + "px; left:" + (e.pageX - 20) + "px; backdrop-filter: invert(1);") })
+const cursor = document.querySelector("#cursor");
+document.addEventListener("mousemove", e => { cursor.setAttribute("style", "top: " + (e.pageY - 20) + "px; left:" + (e.pageX - 20) + "px; backdrop-filter: invert(1);") })
 
 const chatur = document.getElementById("chatur");
 const mail = document.getElementById("mail");
@@ -39,5 +39,5 @@ const c1 = document.getElementById("c1");
 const c2 = document.getElementById("c2");
 const c3 = document.getElementById("c3");
 gsap.to("#work", { scrollTrigger: { trigger: "#work", start: "top bottom", end: "bottom top", onUpdate: (self) => { c1; c1.style.top = ((4500 * self.progress) - 2050) + "px"; } } });
-gsap.to("#work", { scrollTrigger: { trigger: "#work", start: "top bottom", end: "bottom top", onUpdate: (self) => { c2; c2.style.top = ((-100 * self.progress) - 200) + "px"; } } });
+gsap.to("#work", { scrollTrigger: { trigger: "#work", start: "top bottom", end: "bottom top", onUpdate: (self) => { c2; c2.style.top = ((-250 * self.progress) - 100) + "px"; } } });
 gsap.to("#work", { scrollTrigger: { trigger: "#work", start: "top bottom", end: "bottom top", onUpdate: (self) => { c3; c3.style.top = ((4000 * self.progress) - 2000) + "px"; } } });
