@@ -1,6 +1,12 @@
 const lenis = new Lenis({ autoRaf: true, });
 lenis.on('scroll', (e) => { console.log(e); });
 
+const lefta = new SplitType("#left");
+const righta = new SplitType("#right");
+const chatura = new SplitType("#chatur");
+const maila = new SplitType("#mail");
+gsap.from(".char",{y: 70,duration:0.8 ,ease:"power3.out",delay:0.4})
+
 const cursor = document.querySelector("#cursor");
 document.addEventListener("mousemove", e => { cursor.setAttribute("style", "top: " + (e.pageY - 20) + "px; left:" + (e.pageX - 20) + "px; backdrop-filter: invert(1);") })
 
@@ -15,16 +21,12 @@ const mailtl = gsap.timeline({ paused: true })
   .to("#mail", { x: -dist })
   .to("#mail", { color: "#f4f4f4", duration: 0.15 }, "<")
   .to("#left", { x: -dist }, "<")
-  .to("#chatur", { x: -dist, color: "transparent", }, "<")
+  .to("#chatur", { x: -dist, color: "transparent" }, "<")
   .to("#right", { x: dist }, "<")
 chatur.addEventListener("mouseenter", function () { mailtl.play() })
 chatur.addEventListener("mouseleave", function () { mailtl.reverse() })
 mail.addEventListener("mouseenter", function () { mailtl.play() })
 mail.addEventListener("mouseleave", function () { mailtl.reverse() })
-
-//gsap.from("#left", { color: "black", ease: "power1.out", duration: 0.5 })
-//gsap.from("#right", { color: "black", ease: "power1.out", duration: 0.5 })
-//gsap.from("#chatur", { color: "black", ease: "power1.out", duration: 0.5 })
 
 gsap.from("#da", { transformOrigin: "bottom center", scaleY: 6, duration: 1, ease: "power1.out", delay: 0.2 })
 gsap.from("#ia1", { transformOrigin: "top center", scaleY: 2.2, duration: 1, ease: "power1.out", delay: 0.2 })
