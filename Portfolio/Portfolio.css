@@ -4,7 +4,6 @@
 }
 body {
     margin: 0;
-    /*cursor: none;*/
 }
 #hero {
     height: 100vh;
@@ -12,18 +11,6 @@ body {
     flex-direction: column;
     justify-content: center;
     background-color:#0b0b0b;
-}
-#cursor{
-    z-index: 1000;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    position: absolute;
-    backdrop-filter: invert(0);             /*will change to one in js after mouse move*/
-
-    transition-duration: 50ms;
-    transition-timing-function: ease-out;
-    pointer-events: none;
 }
 #head{
     -webkit-user-select: none; /* Safari */                     /*prevent text selecting*/
