@@ -45,11 +45,15 @@ h1 {
     padding-right: 17px;
     z-index: 2;
 }
+#chatur {
+    cursor:pointer;
+}
 #mail {
     -webkit-user-select: none; /* Safari */
     -ms-user-select: none; /* IE 10 and IE 11 */
     user-select: none; /* Standard syntax */
-
+    background-color: #0b0b0b;
+    cursor:pointer;
     position: absolute;
     color:transparent;
     z-index: 0;
@@ -60,7 +64,13 @@ h1 {
     z-index: 9;
     background-color: #0b0b0b;
 }
-
+#copy {
+    font-size: 2em;
+    color: #0b0b0b;
+    pointer-events: none;
+    position: absolute;
+    z-index: 0;
+}
 
 
 #designer { 

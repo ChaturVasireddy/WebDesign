@@ -13,7 +13,7 @@ mail.style.left = chatur.offsetLeft + "px";
 window.addEventListener('resize', f => { mail.style.left = chatur.offsetLeft + "px"; });
 
 gsap.defaults({ ease: "power1.inOut" });
-dist = 249;
+dist = 255;
 const mailtl = gsap.timeline({ paused: true })
   .to("#mail", { x: -dist })
   .to("#mail", { color: "#f4f4f4", duration: 0.15 }, "<")
@@ -24,6 +24,13 @@ chatur.addEventListener("mouseenter", function () { mailtl.play() })
 chatur.addEventListener("mouseleave", function () { mailtl.reverse() })
 mail.addEventListener("mouseenter", function () { mailtl.play() })
 mail.addEventListener("mouseleave", function () { mailtl.reverse() })
+
+const copytl = gsap.timeline({ paused: true })
+  .to("#copy", { y: -30,color:"#404040",duration:0.3,delay:0.3})
+chatur.addEventListener("mouseenter", function () { copytl.play() })
+chatur.addEventListener("mouseleave", function () { copytl.reverse() })
+mail.addEventListener("mouseenter", function () { copytl.play() })
+mail.addEventListener("mouseleave", function () { copytl.reverse() })
 
 chatur.addEventListener("click", function () {navigator.clipboard.writeText("chaturvasireddy@gmail.com")});
 mail.addEventListener("click", function () {navigator.clipboard.writeText("chaturvasireddy@gmail.com")});
