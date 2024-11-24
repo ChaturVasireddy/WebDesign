@@ -28,6 +28,9 @@ chatur.addEventListener("mouseleave", function () { mailtl.reverse() })
 mail.addEventListener("mouseenter", function () { mailtl.play() })
 mail.addEventListener("mouseleave", function () { mailtl.reverse() })
 
+chatur.addEventListener("click", function () {navigator.clipboard.writeText("chaturvasireddy@gmail.com")});
+mail.addEventListener("click", function () {navigator.clipboard.writeText("chaturvasireddy@gmail.com")});
+
 gsap.from("#da", { transformOrigin: "bottom center", scaleY: 6, duration: 1, ease: "power1.out", delay: 0.2 })
 gsap.from("#ia1", { transformOrigin: "top center", scaleY: 2.2, duration: 1, ease: "power1.out", delay: 0.2 })
 gsap.from("#ia2", { transformOrigin: "center", scaleX: 3, duration: 1.2, ease: "power1.out" })
