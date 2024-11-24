@@ -7,6 +7,9 @@ const chatura = new SplitType("#chatur");
 const maila = new SplitType("#mail");
 gsap.from(".char",{y: 70,duration:0.8 ,ease:"power3.out",delay:0.4})
 
+//const cursor = document.querySelector("#cursor");
+//document.addEventListener("mousemove", e => { cursor.setAttribute("style", "top: " + (e.pageY - 20) + "px; left:" + (e.pageX - 20) + "px; backdrop-filter: invert(1);") })
+
 const chatur = document.getElementById("chatur");
 const mail = document.getElementById("mail");
 mail.style.left = chatur.offsetLeft + "px";
