@@ -1,3 +1,29 @@
+document.addEventListener("DOMContentLoaded", function() {
+    const images = document.querySelectorAll("img");
+    console.log("Total images to load:", images.length);
+    let loadedImages = 0;
+
+    function imageLoaded() {
+        loadedImages++;
+        console.log(`Image loaded. Progress: ${loadedImages}/${images.length}`);
+        if (loadedImages === images.length) {
+            console.log("All images loaded, hiding loading screen");
+            document.getElementById("loading-screen").style.display = "none";
+        }
+    }
+
+    images.forEach((img) => {
+        if (img.complete) {
+            console.log("Image already loaded:", img.src);
+            imageLoaded();
+        } else {
+            console.log("Waiting for image to load:", img.src);
+            img.addEventListener("load", imageLoaded);
+            img.addEventListener("error", imageLoaded); // Handle errors to avoid infinite loading
+        }
+    });
+});
+
 const lenis = new Lenis({ autoRaf: true, });
 lenis.on('scroll', (e) => { console.log(e); });
 
@@ -26,8 +52,8 @@ mail.addEventListener("mouseenter", function () { mailtl.play() })
 mail.addEventListener("mouseleave", function () { mailtl.reverse() })
 
 const copytl = gsap.timeline({ paused: true })
-  .to("#copy", { y: -30,color:"#6c6c6c",duration:0.3,ease:"power1.inOut"})
-  .to("#copy", { y: 0,color:"#6c6c6c",duration:0.3,ease:"power1.inOut",delay:1})
+  .to("#copy", { y: -30,color:"#6c6c6c",duration:0.35,ease:"power3.inOut"})
+  .to("#copy", { y: 0,color:"#6c6c6c",duration:0.35,ease:"power3.inOut",delay:0.8})
 
 chatur.addEventListener("click", function () {navigator.clipboard.writeText("chaturatwork@gmail.com"),copytl.restart()});
 mail.addEventListener("click", function () {navigator.clipboard.writeText("chaturatwork@gmail.com"),copytl.restart()});
