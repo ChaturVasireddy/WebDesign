@@ -13,7 +13,7 @@ mail.style.left = chatur.offsetLeft + "px";
 window.addEventListener('resize', f => { mail.style.left = chatur.offsetLeft + "px"; });
 
 gsap.defaults({ ease: "power1.inOut" });
-dist = 255;
+dist = 229;
 const mailtl = gsap.timeline({ paused: true })
   .to("#mail", { x: -dist })
   .to("#mail", { color: "#f4f4f4", duration: 0.15 }, "<")
@@ -26,14 +26,11 @@ mail.addEventListener("mouseenter", function () { mailtl.play() })
 mail.addEventListener("mouseleave", function () { mailtl.reverse() })
 
 const copytl = gsap.timeline({ paused: true })
-  .to("#copy", { y: -30,color:"#404040",duration:0.3,delay:0.3})
-chatur.addEventListener("mouseenter", function () { copytl.play() })
-chatur.addEventListener("mouseleave", function () { copytl.reverse() })
-mail.addEventListener("mouseenter", function () { copytl.play() })
-mail.addEventListener("mouseleave", function () { copytl.reverse() })
+  .to("#copy", { y: -30,color:"#6c6c6c",duration:0.3,ease:"power1.inOut"})
+  .to("#copy", { y: 0,color:"#6c6c6c",duration:0.3,ease:"power1.inOut",delay:1})
 
-chatur.addEventListener("click", function () {navigator.clipboard.writeText("chaturvasireddy@gmail.com")});
-mail.addEventListener("click", function () {navigator.clipboard.writeText("chaturvasireddy@gmail.com")});
+chatur.addEventListener("click", function () {navigator.clipboard.writeText("chaturatwork@gmail.com"),copytl.restart()});
+mail.addEventListener("click", function () {navigator.clipboard.writeText("chaturatwork@gmail.com"),copytl.restart()});
 
 gsap.from("#da", { transformOrigin: "bottom center", scaleY: 6, duration: 1, ease: "power1.out", delay: 0.2 })
 gsap.from("#ia1", { transformOrigin: "top center", scaleY: 2.2, duration: 1, ease: "power1.out", delay: 0.2 })
