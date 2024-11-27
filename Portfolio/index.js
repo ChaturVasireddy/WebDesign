@@ -73,3 +73,4 @@ const c3 = document.getElementById("c3");
 gsap.to("#work", { scrollTrigger: { trigger: "#work", start: "top bottom", end: "bottom top", onUpdate: (self) => { c1; c1.style.top = ((3350 * self.progress) - 1700) + "px"; } } });
 gsap.to("#work", { scrollTrigger: { trigger: "#work", start: "top bottom", end: "bottom top", onUpdate: (self) => { c2; c2.style.top = ((-200 * self.progress) -50) + "px"; } } });
 gsap.to("#work", { scrollTrigger: { trigger: "#work", start: "top bottom", end: "bottom top", onUpdate: (self) => { c3; c3.style.top = ((3100 * self.progress) - 1500) + "px"; } } });
+//change to trigger website update
