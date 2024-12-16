@@ -5,6 +5,19 @@
 body {
     margin: 0;
 }
+::-moz-selection { /* Code for Firefox */
+    color: #0b0b0b;
+    background: #f4f4f4;
+  }
+  
+  ::selection {
+    color: #0b0b0b;
+    background: #f4f4f4;
+  }
+
+
+
+
 #hero {
     height: 100vh;
     display: flex;
