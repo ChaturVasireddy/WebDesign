@@ -5,7 +5,7 @@ const lefta = new SplitType("#left");
 const righta = new SplitType("#right");
 const chatura = new SplitType("#chatur");
 const maila = new SplitType("#mail");
-gsap.from(".char",{y: 70,duration:0.8 ,ease:"power3.out",delay:0.4})
+gsap.from(".char",{y: 70,duration:0.8 ,ease:"power4.out",delay:0.4})
 
 const chatur = document.getElementById("chatur");
 const mail = document.getElementById("mail");
@@ -13,7 +13,7 @@ mail.style.left = chatur.offsetLeft + "px";
 window.addEventListener('resize', f => { mail.style.left = chatur.offsetLeft + "px"; });
 
 var ww = window.innerWidth;
-dist = (0.142*ww);
+dist = (0.146*ww);
 window.addEventListener('resize', f => { ww = window.innerWidth; });      //not working on window resize
 gsap.defaults({ ease: "power1.inOut" });
 const mailtl = gsap.timeline({ paused: true })
@@ -28,7 +28,7 @@ mail.addEventListener("mouseenter", function () { mailtl.play() })
 mail.addEventListener("mouseleave", function () { mailtl.reverse() })
 
 const copytl = gsap.timeline({ paused: true })
-  .to("#copy", { y: (-0.019*ww),color:"#6c6c6c",duration:0.35,ease:"power3.inOut"})
+  .to("#copy", { y: (-0.022*ww),color:"#6c6c6c",duration:0.35,ease:"power3.inOut"})
   .to("#copy", { y: 0,color:"#0b0b0b",duration:0.35,ease:"power3.inOut",delay:0.8})
 
 chatur.addEventListener("click", function () {navigator.clipboard.writeText("chaturatwork@gmail.com"),copytl.restart()});
