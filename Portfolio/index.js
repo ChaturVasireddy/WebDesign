@@ -28,8 +28,8 @@ mail.addEventListener("mouseenter", function () { mailtl.play() })
 mail.addEventListener("mouseleave", function () { mailtl.reverse() })
 
 const copytl = gsap.timeline({ paused: true })
-  .to("#copy", { y: (-0.022*ww),color:"#6c6c6c",duration:0.35,ease:"power3.inOut"})
-  .to("#copy", { y: 0,color:"#0b0b0b",duration:0.35,ease:"power3.inOut",delay:0.8})
+  .to("#copy", { y: (-0.020*ww),color:"#6c6c6c",duration:0.35,ease:"power2.inOut"})
+  .to("#copy", { y: 0,color:"#0b0b0b",duration:0.35,ease:"power1.inOut",delay:0.8})
 
 chatur.addEventListener("click", function () {navigator.clipboard.writeText("chaturatwork@gmail.com"),copytl.restart()});
 mail.addEventListener("click", function () {navigator.clipboard.writeText("chaturatwork@gmail.com"),copytl.restart()});
@@ -43,9 +43,7 @@ gsap.from("#dota", { transformOrigin: "bottom center", scaleY: 4, duration: 1.2,
 
 gsap.registerPlugin(ScrollTrigger);
 
-const c1 = document.getElementById("c1");
-const c2 = document.getElementById("c2");
-const c3 = document.getElementById("c3");
-gsap.to("#work", { scrollTrigger: { trigger: "#work", start: "top bottom", end: "bottom top", onUpdate: (self) => { c1; c1.style.top = ((3350 * self.progress) - 1700) + "px"; } } });
-gsap.to("#work", { scrollTrigger: { trigger: "#work", start: "top bottom", end: "bottom top", onUpdate: (self) => { c2; c2.style.top = ((-200 * self.progress) -50) + "px"; } } });
-gsap.to("#work", { scrollTrigger: { trigger: "#work", start: "top bottom", end: "bottom top", onUpdate: (self) => { c3; c3.style.top = ((3100 * self.progress) - 1500) + "px"; } } });
+var wh = window.innerHeight;
+gsap.to("#work", { scrollTrigger: { trigger: "#work", start: "top bottom", end: "bottom top", onUpdate: (self) => { c1; c1.style.top = (((1.5*wh) * self.progress) - (wh*0.85)) + "px"; } } });
+gsap.to("#work", { scrollTrigger: { trigger: "#work", start: "top bottom", end: "bottom top", onUpdate: (self) => { c2; c2.style.top = (((-0.05*wh) * self.progress)) + "px"; } } });
+gsap.to("#work", { scrollTrigger: { trigger: "#work", start: "top bottom", end: "bottom top", onUpdate: (self) => { c3; c3.style.top = (((1.5*wh) * self.progress) - (wh*0.5)) + "px"; } } });
