@@ -16,7 +16,7 @@ dist = (0.146*ww);
 window.addEventListener('resize', f => { ww = window.innerWidth; });      //not working on window resize
 gsap.defaults({ ease: "power1.inOut" });
 const mailtl = gsap.timeline({ paused: true })
-  .to("#mail", { x: -dist })
+  .to("#mail", { x: -dist,delay:0.075 })
   .to("#mail", { color: "#f4f4f4", duration: 0.15 }, "<")
   .to("#left", { x: -dist }, "<")
   .to("#chatur", { x: -dist, color: "transparent" }, "<")
