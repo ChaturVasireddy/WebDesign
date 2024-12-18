@@ -12,7 +12,7 @@ mail.style.left = chatur.offsetLeft + "px";
 window.addEventListener('resize', f => { mail.style.left = chatur.offsetLeft + "px"; });
 
 var ww = window.innerWidth;
-dist = (0.146*ww);
+dist = (0.144*ww);
 window.addEventListener('resize', f => { ww = window.innerWidth; });      //not working on window resize
 gsap.defaults({ ease: "power1.inOut" });
 const mailtl = gsap.timeline({ paused: true })
