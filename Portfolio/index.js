@@ -1,6 +1,11 @@
 const lenis = new Lenis({ autoRaf: true, });
 lenis.on('scroll', (e) => { console.log(e); });
 
+var wh = window.innerHeight;
+
+gsap.to("#loadingscreen", { y:-wh,duration: 0.5, ease: "power1.inOut" })
+gsap.to("#loadingscreen", { duration: 0, opacity:0,delay:0.5 })
+
 gsap.from("#left",{y: 70,duration:0.8 ,ease:"power4.out",delay:0.4})
 gsap.from("#chatur",{y: 70,duration:0.8 ,ease:"power4.out",delay:0.4})
 gsap.from("#right",{y: 70,duration:0.8 ,ease:"power4.out",delay:0.4})
@@ -42,7 +47,7 @@ gsap.from("#dota", { transformOrigin: "bottom center", scaleY: 4, duration: 1.2,
 
 gsap.registerPlugin(ScrollTrigger);
 
-var wh = window.innerHeight;
+
 gsap.to("#work", { scrollTrigger: { trigger: "#work", start: "top bottom", end: "bottom top", onUpdate: (self) => { c1; c1.style.top = (((1.5*wh) * self.progress) - (wh*0.85)) + "px"; } } });
 gsap.to("#work", { scrollTrigger: { trigger: "#work", start: "top bottom", end: "bottom top", onUpdate: (self) => { c2; c2.style.top = (((-0.05*wh) * self.progress)) + "px"; } } });
 gsap.to("#work", { scrollTrigger: { trigger: "#work", start: "top bottom", end: "bottom top", onUpdate: (self) => { c3; c3.style.top = (((1.5*wh) * self.progress) - (wh*0.5)) + "px"; } } });
