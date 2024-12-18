@@ -1,11 +1,10 @@
 const lenis = new Lenis({ autoRaf: true, });
 lenis.on('scroll', (e) => { console.log(e); });
 
-const lefta = new SplitType("#left");
-const righta = new SplitType("#right");
-const chatura = new SplitType("#chatur");
-const maila = new SplitType("#mail");
-gsap.from(".char",{y: 70,duration:0.8 ,ease:"power4.out",delay:0.4})
+gsap.from("#left",{y: 70,duration:0.8 ,ease:"power4.out",delay:0.4})
+gsap.from("#chatur",{y: 70,duration:0.8 ,ease:"power4.out",delay:0.4})
+gsap.from("#right",{y: 70,duration:0.8 ,ease:"power4.out",delay:0.4})
+gsap.from("#mail",{y: 70,duration:0.8 ,ease:"power4.out",delay:0.4})
 
 const chatur = document.getElementById("chatur");
 const mail = document.getElementById("mail");
