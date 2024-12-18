@@ -3,13 +3,13 @@ lenis.on('scroll', (e) => { console.log(e); });
 
 var wh = window.innerHeight;
 
-gsap.to("#loadingscreen", { y:-wh,duration: 0.5, ease: "power1.inOut" })
-gsap.to("#loadingscreen", { duration: 0, opacity:0,delay:0.5 })
+gsap.to("#loadingscreen", { y:-wh,duration: 0.5 , ease: "power1.inOut",delay:0.25 })
+gsap.to("#loadingscreen", { duration: 0, opacity:0,delay:0.75 })
 
-gsap.from("#left",{y: 70,duration:0.8 ,ease:"power4.out",delay:0.4})
-gsap.from("#chatur",{y: 70,duration:0.8 ,ease:"power4.out",delay:0.4})
-gsap.from("#right",{y: 70,duration:0.8 ,ease:"power4.out",delay:0.4})
-gsap.from("#mail",{y: 70,duration:0.8 ,ease:"power4.out",delay:0.4})
+gsap.from("#left",{y: 70,duration:0.8 ,ease:"power4.out",delay:0.65})
+gsap.from("#chatur",{y: 70,duration:0.8 ,ease:"power4.out",delay:0.65})
+gsap.from("#right",{y: 70,duration:0.8 ,ease:"power4.out",delay:0.65})
+gsap.from("#mail",{y: 70,duration:0.8 ,ease:"power4.out",delay:0.65})
 
 const chatur = document.getElementById("chatur");
 const mail = document.getElementById("mail");
@@ -38,12 +38,12 @@ const copytl = gsap.timeline({ paused: true })
 chatur.addEventListener("click", function () {navigator.clipboard.writeText("chaturatwork@gmail.com"),copytl.restart()});
 mail.addEventListener("click", function () {navigator.clipboard.writeText("chaturatwork@gmail.com"),copytl.restart()});
 
-gsap.from("#da", { transformOrigin: "bottom center", scaleY: 6, duration: 1, ease: "power1.out", delay: 0.2 })
-gsap.from("#ia1", { transformOrigin: "top center", scaleY: 2.2, duration: 1, ease: "power1.out", delay: 0.2 })
-gsap.from("#ia2", { transformOrigin: "center", scaleX: 3, duration: 1.2, ease: "power1.out" })
-gsap.from("#na", { transformOrigin: "top center", scaleY: 3, duration: 1, ease: "power1.out", delay: 0.2 })
-gsap.from("#ra", { transformOrigin: "top center", scaleY: 4, duration: 1, ease: "power1.out", delay: 0.2 })
-gsap.from("#dota", { transformOrigin: "bottom center", scaleY: 4, duration: 1.2, ease: "power1.out" })
+gsap.from("#da", { transformOrigin: "bottom center", scaleY: 6, duration: 1, ease: "power1.out", delay: 0.5 })
+gsap.from("#ia1", { transformOrigin: "top center", scaleY: 2.2, duration: 1, ease: "power1.out", delay: 0.5 })
+gsap.from("#ia2", { transformOrigin: "center", scaleX: 3, duration: 1.2, ease: "power1.out",delay:0.25 })
+gsap.from("#na", { transformOrigin: "top center", scaleY: 3, duration: 1, ease: "power1.out", delay: 0.5 })
+gsap.from("#ra", { transformOrigin: "top center", scaleY: 4, duration: 1, ease: "power1.out", delay: 0.5 })
+gsap.from("#dota", { transformOrigin: "bottom center", scaleY: 4, duration: 1.2, ease: "power1.out",delay:0.25  })
 
 gsap.registerPlugin(ScrollTrigger);
 
