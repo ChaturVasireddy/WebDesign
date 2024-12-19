@@ -41,13 +41,13 @@ mail.addEventListener("click", function () {navigator.clipboard.writeText("chatu
 gsap.from("#da", { transformOrigin: "bottom center", scaleY: 6, duration: 1, ease: "power1.out", delay: 0.5 })
 gsap.from("#ia1", { transformOrigin: "top center", scaleY: 2.2, duration: 1, ease: "power1.out", delay: 0.5 })
 gsap.from("#ia2", { transformOrigin: "center", scaleX: 3, duration: 1.2, ease: "power1.out",delay:0.25 })
-gsap.from("#na", { transformOrigin: "top center", scaleY: 3, duration: 1, ease: "power1.out", delay: 0.5 })
+gsap.from("#na", { transformOrigin: "top center", scaleY: 2.82, duration: 1, ease: "power1.out", delay: 0.4 })
 gsap.from("#ra", { transformOrigin: "top center", scaleY: 4, duration: 1, ease: "power1.out", delay: 0.5 })
 gsap.from("#dota", { transformOrigin: "bottom center", scaleY: 4, duration: 1.2, ease: "power1.out",delay:0.25  })
 
 gsap.registerPlugin(ScrollTrigger);
 
 
-gsap.to("#work", { scrollTrigger: { trigger: "#work", start: "top bottom", end: "bottom top", onUpdate: (self) => { c1; c1.style.top = (((1.5*wh) * self.progress) - (wh*0.85)) + "px"; } } });
-gsap.to("#work", { scrollTrigger: { trigger: "#work", start: "top bottom", end: "bottom top", onUpdate: (self) => { c2; c2.style.top = (((-0.05*wh) * self.progress)) + "px"; } } });
-gsap.to("#work", { scrollTrigger: { trigger: "#work", start: "top bottom", end: "bottom top", onUpdate: (self) => { c3; c3.style.top = (((1.5*wh) * self.progress) - (wh*0.5)) + "px"; } } });
+// gsap.to("#work", { scrollTrigger: { trigger: "#work", start: "top bottom", end: "bottom top", onUpdate: (self) => { c1; c1.style.top = (((1.5*wh) * self.progress) - (wh*0.85)) + "px"; } } });
+// gsap.to("#work", { scrollTrigger: { trigger: "#work", start: "top bottom", end: "bottom top", onUpdate: (self) => { c2; c2.style.top = (((-0.05*wh) * self.progress)) + "px"; } } });
+// gsap.to("#work", { scrollTrigger: { trigger: "#work", start: "top bottom", end: "bottom top", onUpdate: (self) => { c3; c3.style.top = (((1.5*wh) * self.progress) - (wh*0.5)) + "px"; } } });
