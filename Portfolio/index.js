@@ -4,7 +4,7 @@ lenis.on('scroll', (e) => { console.log(e); });
 var wh = window.innerHeight;
 
 gsap.to("#loadingscreen", { y:-wh,duration: 0.5 , ease: "power1.inOut",delay:0.25 })
-gsap.to("#loadingscreen", { duration: 0, opacity:0,delay:0.75 })
+gsap.to("#loadingscreen", { duration: 0, opacity:0,delay:1})
 
 gsap.from("#left",{y: 70,duration:0.8 ,ease:"power4.out",delay:0.65})
 gsap.from("#chatur",{y: 70,duration:0.8 ,ease:"power4.out",delay:0.65})
