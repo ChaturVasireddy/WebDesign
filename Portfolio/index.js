@@ -74,6 +74,3 @@ if (window.innerWidth > 800) {
   gsap.to("#about", { scrollTrigger: { trigger: "#about", start: "top bottom", end: "bottom top", onUpdate: (self) => { c2; c2.style.top = (((-0.05*wh) * self.progress)) + "px"; } } });
   gsap.to("#about", { scrollTrigger: { trigger: "#about", start: "top bottom", end: "bottom top", onUpdate: (self) => { c3; c3.style.top = (((1.5*wh) * self.progress) - (wh*0.5)) + "px"; } } });
 }
-// gsap.to("#work", { scrollTrigger: { trigger: "#work", start: "top bottom", end: "bottom top", onUpdate: (self) => { c1; c1.style.top = (((1.5*wh) * self.progress) - (wh*0.85)) + "px"; } } });
-// gsap.to("#work", { scrollTrigger: { trigger: "#work", start: "top bottom", end: "bottom top", onUpdate: (self) => { c2; c2.style.top = (((-0.05*wh) * self.progress)) + "px"; } } });
-// gsap.to("#work", { scrollTrigger: { trigger: "#work", start: "top bottom", end: "bottom top", onUpdate: (self) => { c3; c3.style.top = (((1.5*wh) * self.progress) - (wh*0.5)) + "px"; } } });
