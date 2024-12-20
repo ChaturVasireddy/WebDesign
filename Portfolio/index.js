@@ -1,3 +1,5 @@
+window.addEventListener('unload', () => window.scrollTo(0, 0));
+
 const lenis = new Lenis({ autoRaf: true, });
 lenis.on('scroll', (e) => { console.log(e); });
 
