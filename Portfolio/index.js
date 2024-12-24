@@ -78,9 +78,9 @@ if (window.innerWidth > 800) {
 }
 
 if (window.innerWidth > 800) {
-  gsap.to("#na", { scrollTrigger: { trigger: "#work", start: "top bottom", end: "top top",scrub:"true" }, y:75, ease:"none"});
+  gsap.to("#na", { scrollTrigger: { trigger: "#work", start: "top bottom", end: "top top",scrub:"true" }, y:125, ease:"none"});
   gsap.to("#ra", { scrollTrigger: { trigger: "#work", start: "top bottom", end: "top top",scrub:"true" }, y:125, ease:"none"});
-  gsap.to("#ia1", { scrollTrigger: { trigger: "#work", start: "top bottom", end: "top top",scrub:"true" }, y:150, ease:"none"});
+  gsap.to("#ia1", { scrollTrigger: { trigger: "#work", start: "top bottom", end: "top top",scrub:"true" }, y:125, ease:"none"});
   gsap.to("#da", { scrollTrigger: { trigger: "#work", start: "top bottom", end: "top top",scrub:"true" }, y:-150, ease:"none"});
-  gsap.to("#dot", { scrollTrigger: { trigger: "#work", start: "top bottom", end: "top top",scrub:"true" }, y:-10, ease:"none"});
+  gsap.to("#dot", { scrollTrigger: { trigger: "#work", start: "top bottom", end: "top top",scrub:"true" }, y:-15, ease:"none"});
 }
