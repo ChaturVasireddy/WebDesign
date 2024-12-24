@@ -72,7 +72,15 @@ if (window.innerWidth < 800) {
 gsap.registerPlugin(ScrollTrigger);
 
 if (window.innerWidth > 800) {
-  gsap.to("#about", { scrollTrigger: { trigger: "#about", start: "top bottom", end: "bottom top", onUpdate: (self) => { c1; c1.style.top = (((1.5*wh) * self.progress) - (wh*0.85)) + "px"; } } });
-  gsap.to("#about", { scrollTrigger: { trigger: "#about", start: "top bottom", end: "bottom top", onUpdate: (self) => { c2; c2.style.top = (((-0.5*wh) * self.progress)) + "px"; } } });
-  gsap.to("#about", { scrollTrigger: { trigger: "#about", start: "top bottom", end: "bottom top", onUpdate: (self) => { c3; c3.style.top = (((1.25*wh) * self.progress) - (wh*0.5)) + "px"; } } });
+  gsap.to("#work", { scrollTrigger: { trigger: "#work", start: "top bottom", end: "bottom top", onUpdate: (self) => { c1; c1.style.top = (((1.5*wh) * self.progress) - (wh*0.85)) + "px"; } } });
+  gsap.to("#work", { scrollTrigger: { trigger: "#work", start: "top bottom", end: "bottom top", onUpdate: (self) => { c2; c2.style.top = (((-0.5*wh) * self.progress)) + "px"; } } });
+  gsap.to("#work", { scrollTrigger: { trigger: "#work", start: "top bottom", end: "bottom top", onUpdate: (self) => { c3; c3.style.top = (((1.25*wh) * self.progress) - (wh*0.5)) + "px"; } } });
+}
+
+if (window.innerWidth > 800) {
+  gsap.to("#na", { scrollTrigger: { trigger: "#work", start: "top bottom", end: "top top",scrub:"true" }, y:75, ease:"none"});
+  gsap.to("#ra", { scrollTrigger: { trigger: "#work", start: "top bottom", end: "top top",scrub:"true" }, y:125, ease:"none"});
+  gsap.to("#ia1", { scrollTrigger: { trigger: "#work", start: "top bottom", end: "top top",scrub:"true" }, y:150, ease:"none"});
+  gsap.to("#da", { scrollTrigger: { trigger: "#work", start: "top bottom", end: "top top",scrub:"true" }, y:-150, ease:"none"});
+  gsap.to("#dot", { scrollTrigger: { trigger: "#work", start: "top bottom", end: "top top",scrub:"true" }, y:-10, ease:"none"});
 }
