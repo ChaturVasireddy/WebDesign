@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 ::-moz-selection {       /* Code for Firefox */
     color: #0b0b0b;
